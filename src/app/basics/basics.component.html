@@ -21,6 +21,13 @@
             <!-- property binding vs data binding -->
             <p [innerText]="shouldAllowAddingServer"></p>
             <p>{{ shouldAllowAddingServer }}</p>
+
+            <!-- Event binding -->
+            <label>Server Name</label>
+            <input (input)="onInputServerName($event)" class="form-control" type="text" />
+            <p>Selected Server Name:: {{ serverName }} </p>
+            <button class="btn btn-info" (click)="onCreateServer()">Create Server</button>
+            <p>Server creation status:: {{ serverCreationStatus }}</p>
         </div>
     </div>
 </div>

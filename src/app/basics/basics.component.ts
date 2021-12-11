@@ -25,6 +25,17 @@ export class BasicsComponent implements OnInit {
     return this.serverStatus;
   }
 
+  serverCreationStatus: string = "No server is created";
+  // use on before method to provide info that it is being used for event binding
+  onCreateServer() {
+    this.serverCreationStatus = "Server is created";
+  }
+
+  serverName: string = "";
+  onInputServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
 }
 
 /*
