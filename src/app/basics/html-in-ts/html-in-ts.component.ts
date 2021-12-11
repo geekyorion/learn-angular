@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  // selector: 'app-html-in-ts', // <app-html-in-ts></app-html-in-ts>
+  selector: 'app-html-in-ts', // <app-html-in-ts></app-html-in-ts>
   // selector: '[app-html-in-ts]',  // <div app-html-in-ts></div>
-  selector: '.app-html-in-ts', // <div class="app-html-in-ts"></div> // angular doesn't support id selector and any other pseudo selectors
+  // selector: '.app-html-in-ts', // <div class="app-html-in-ts"></div> // angular doesn't support id selector and any other pseudo selectors
   template: `
     <p>from ts file</p>
     <p class="text-info second-para">
