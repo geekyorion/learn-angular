@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-basics',
-  templateUrl: './basics.component.html',
-  styleUrls: ['./basics.component.css']
+@Component({  // decorator to tell angular that it is not a normal class
+  selector: 'app-basics', // tag to call this component in the html file
+  templateUrl: './basics.component.html', // html template
+  styleUrls: ['./basics.component.css'] // multiple css files can be used
 })
 export class BasicsComponent implements OnInit {
 

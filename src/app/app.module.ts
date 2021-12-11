@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BasicsComponent } from './basics/basics.component';
+import { BasicsComponent } from './basics/basics.component';  // add the component here in the app module
 
 @NgModule({
   declarations: [
     AppComponent,
-    BasicsComponent
+    BasicsComponent // need to declare the component in this block
   ],
   imports: [
     BrowserModule,
