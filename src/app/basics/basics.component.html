@@ -28,6 +28,10 @@
             <p>Selected Server Name:: {{ serverName }} </p>
             <button class="btn btn-info" (click)="onCreateServer()">Create Server</button>
             <p>Server creation status:: {{ serverCreationStatus }}</p>
+
+            <!-- Two way data binding -->
+            <!-- NOTE: import FormsModule in the app.module.ts cause here we are using ngModel directive -->
+            <input class="form-control" [(ngModel)]="demoServerName" type="text" />
         </div>
     </div>
 </div>

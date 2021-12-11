@@ -11,6 +11,7 @@ export class BasicsComponent implements OnInit {
   serverStatus: string = 'offline';
 
   shouldAllowAddingServer: boolean = false;
+  demoServerName: string = 'demoServer';
 
   constructor() {
     setTimeout(() => {
