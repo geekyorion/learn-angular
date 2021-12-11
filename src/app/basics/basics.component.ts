@@ -10,7 +10,13 @@ export class BasicsComponent implements OnInit {
   serverID: number = 10;
   serverStatus: string = 'offline';
 
-  constructor() { }
+  shouldAllowAddingServer: boolean = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.shouldAllowAddingServer = true;
+    }, 1000);
+  }
 
   ngOnInit(): void {
   }
