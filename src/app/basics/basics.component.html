@@ -18,6 +18,9 @@
             <p>{{ 'Server' }} with ID {{ serverID }} is {{ getServerStatus() }}</p>
             <!-- attribute binding -->
             <button class="btn btn-primary" [disabled]="!shouldAllowAddingServer">Add Server</button>
+            <!-- property binding vs data binding -->
+            <p [innerText]="shouldAllowAddingServer"></p>
+            <p>{{ shouldAllowAddingServer }}</p>
         </div>
     </div>
 </div>
