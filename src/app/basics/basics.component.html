@@ -37,6 +37,14 @@
             <!-- Two way data binding -->
             <!-- NOTE: import FormsModule in the app.module.ts cause here we are using ngModel directive -->
             <input class="form-control" [(ngModel)]="demoServerName" type="text" />
+
+            <!--
+                ngIf is a structural directory and it changes the DOM (add/remove) but others are not structural directires
+                and doesn't change the DOM instead they change the element on they were placed on
+            -->
+            <p [ngStyle]="{ backgroundColor: getColor() }" [ngClass]="{ 'text-light': serverStatus === 'online' }">
+                directive example. Server Example :: {{ serverStatus }}
+            </p>
         </div>
     </div>
 </div>
