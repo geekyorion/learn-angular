@@ -29,7 +29,10 @@
             <button class="btn btn-info" (click)="onCreateServer()">Create Server</button>
 
             <!-- a directive is a attribute or parameter mostly which has it's own functionality -->
-            <p *ngIf="isServerCreated">Server creation status:: {{ serverCreationStatus }}</p>
+            <p *ngIf="isServerCreated; else noServer">Server creation status:: {{ serverCreationStatus }}</p>
+            <ng-template #noServer>
+                <p class="text-danger">{{ serverCreationStatus }}</p>
+            </ng-template>
 
             <!-- Two way data binding -->
             <!-- NOTE: import FormsModule in the app.module.ts cause here we are using ngModel directive -->

@@ -27,7 +27,7 @@ export class BasicsComponent implements OnInit {
   }
 
   serverCreationStatus: string = "No server is created";
-  isServerCreated: boolean = true;
+  isServerCreated: boolean = false;
   // an event binded function should start with 'on' to indicate that it is binded with an event in HTML file
   onCreateServer() {
     this.isServerCreated = true;
