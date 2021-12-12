@@ -27,7 +27,9 @@
             <input (input)="onInputServerName($event)" class="form-control" type="text" />
             <p>Selected Server Name:: {{ serverName }} </p>
             <button class="btn btn-info" (click)="onCreateServer()">Create Server</button>
-            <p>Server creation status:: {{ serverCreationStatus }}</p>
+
+            <!-- a directive is a attribute or parameter mostly which has it's own functionality -->
+            <p *ngIf="isServerCreated">Server creation status:: {{ serverCreationStatus }}</p>
 
             <!-- Two way data binding -->
             <!-- NOTE: import FormsModule in the app.module.ts cause here we are using ngModel directive -->
