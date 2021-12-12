@@ -44,6 +44,11 @@ export class BasicsComponent implements OnInit {
     return (this.serverStatus === 'online' ? 'green' : 'red');
   }
 
+  randomNumbers: number[] = [];
+  addARandomNumber() {
+    this.randomNumbers.push(~~(Math.random() * 1000) % 1000);
+  }
+
 }
 
 /*

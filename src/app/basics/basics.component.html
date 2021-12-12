@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5">
     <div class="row">
         <div class="col-xs-12">
             <h1>Welcome to basics</h1>
@@ -39,12 +39,19 @@
             <input class="form-control" [(ngModel)]="demoServerName" type="text" />
 
             <!--
-                ngIf is a structural directory and it changes the DOM (add/remove) but others are not structural directires
+                ngIf and ngFor is a structural directory and it changes the DOM (add/remove) but others are not structural directires
                 and doesn't change the DOM instead they change the element on they were placed on
             -->
             <p [ngStyle]="{ backgroundColor: getColor() }" [ngClass]="{ 'text-light': serverStatus === 'online' }">
                 directive example. Server Example :: {{ serverStatus }}
             </p>
+
+            <!-- ngFor loop through the items and put the value as per the object -->
+            <hr />
+            <button class="btn btn-primary" (click)="addARandomNumber()">Add a random number</button>
+            <ul>
+                <li *ngFor="let number of randomNumbers">{{ number }}</li>
+            </ul>
         </div>
     </div>
 </div>
