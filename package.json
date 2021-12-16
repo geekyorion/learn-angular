@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start-ip": "ng serve --host 192.168.201.106 --disable-host-check"
+    "start-ip": "ng serve --host 0.0.0.0 --disable-host-check"
   },
   "private": true,
   "dependencies": {
