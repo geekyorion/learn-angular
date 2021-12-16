@@ -52,6 +52,12 @@
             <ul>
                 <li *ngFor="let number of randomNumbers">{{ number }}</li>
             </ul>
+
+            <!-- ngFor with index -->
+            <button class="btn btn-primary" (click)="addARandomNumber()">Add a random number</button>
+            <ul>
+                <li *ngFor="let number of randomNumbers; let i = index">{{ i + 1 }} - {{ number }}</li>
+            </ul>
         </div>
     </div>
 </div>
