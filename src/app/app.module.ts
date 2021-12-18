@@ -9,10 +9,10 @@ import { HtmlInTsComponent } from './basics/html-in-ts/html-in-ts.component';  /
 
 import { ProjectComponent } from './project/project.component';
 import { HeaderComponent } from './project/components/header/header.component';
-import { ReceipesComponent } from './project/components/receipes/receipes.component';
-import { ReceipeListComponent } from './project/components/receipes/receipe-list/receipe-list.component';
-import { ReceipeDetailComponent } from './project/components/receipes/receipe-detail/receipe-detail.component';
-import { ReceipeItemComponent } from './project/components/receipes/receipe-list/receipe-item/receipe-item.component';
+import { RecipesComponent } from './project/components/recipes/recipes.component';
+import { RecipeListComponent } from './project/components/recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './project/components/recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './project/components/recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './project/components/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './project/components/shopping-list/shopping-edit/shopping-edit.component';
 
@@ -23,10 +23,10 @@ import { ShoppingEditComponent } from './project/components/shopping-list/shoppi
     HtmlInTsComponent, // need to declare the component in this block
     ProjectComponent,
     HeaderComponent,
-    ReceipesComponent,
-    ReceipeListComponent,
-    ReceipeDetailComponent,
-    ReceipeItemComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent
   ],
