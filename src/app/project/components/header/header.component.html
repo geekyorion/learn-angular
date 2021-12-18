@@ -1,1 +1,33 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-brand">Recipe Book</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#recipeNavbarContent"
+            aria-controls="recipeNavarContent" aria-expanded="false" aria-lable="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="recipeNavbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">Shopping List</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0m mr-2">
+                    <li class="nav-item dropdown">
+                        <a href="#" id="manageDropdown" class="nav-link dropdown-toggle" aria-current="page"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Manage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="manageDropdown">
+                            <li><a href="#" class="dropdown-item">Save Data</a></li>
+                            <li><a href="#" class="dropdown-item">Fetch Data</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
