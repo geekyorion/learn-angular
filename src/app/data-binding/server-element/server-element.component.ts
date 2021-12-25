@@ -1,4 +1,17 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewEncapsulation,
+  OnChanges,
+  DoCheck,
+  SimpleChanges,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy
+} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -16,16 +29,68 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   // NOTE: Global styles don't work in the shodow DOM but the component styles will work
   // encapsulation: ViewEncapsulation.ShadowDom
 })
-export class ServerElementComponent implements OnInit {
+export class ServerElementComponent implements
+  OnInit,
+  OnChanges,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy {
 
   // if we pass any string here then we can not bind the data using element property now
   @Input('serverElement') element: { name: string, type: string, content: string } = {
     name: '', type: '', content: ''
   };
 
-  constructor() { }
+  constructor() {
+    console.log('constuctor called')
+  }
 
   ngOnInit(): void {
+    console.log('ngOnInit called');
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges called', changes);
+  }
+
+  ngDoCheck() {
+    console.log('ngDoCheck called');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit called')
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('ngAfterContentChecked called');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit called')
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked called');
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
   }
 
 }
+
+// order in which life cycle methods are called
+/**
+ * 1. constructor
+ * 2. ngOnChanges (OnChanges)
+ * 3. ngOnInit (OnInit)
+ * 4. ngDoCheck (DoCheck)
+ * 5. ngAfterContentInit (AfterContentInit)
+ * 6. ngAfterContentChecked (AfterContentChecked)
+ * 7. ngAfterViewInit (AfterViewInit)
+ * 8. ngAfterViewChecked (AfterViewChecked)
+ * 9. ngOnDestroy (OnDestroy)
+ */
