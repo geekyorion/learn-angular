@@ -4,6 +4,17 @@
     <div class="row">
         <div class="col-xs-12">
             <app-server-element *ngFor="let serverElement of serverElements" [serverElement]="serverElement">
+                <div class="bg-light px-3 py-1">
+                    <p>to render this paragraph or to project this paragraph use &lt;ng-content&gt;&lt;/ng-content&gt;
+                    </p>
+                    <p>
+                        the above line is projected using &lt;ng-content&gt;&lt;/ng-content&gt; which has access to
+                        parent
+                        properties
+                        <br />
+                        the server name is {{ serverElement.name }}
+                    </p>
+                </div>
             </app-server-element>
         </div>
     </div>
