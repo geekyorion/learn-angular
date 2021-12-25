@@ -1,0 +1,4 @@
+/* if encapsulation is set to None then this style will be provided to cockpit labels once a server is added */
+label {
+    color: blue;
+}
