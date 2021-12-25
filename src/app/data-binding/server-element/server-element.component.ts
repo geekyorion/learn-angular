@@ -12,7 +12,8 @@ import {
   AfterViewChecked,
   OnDestroy,
   ViewChild,
-  ElementRef
+  ElementRef,
+  ContentChild
 } from '@angular/core';
 
 @Component({
@@ -49,20 +50,29 @@ export class ServerElementComponent implements
   @ViewChild('elementName') elementNameWithoutStatic: ElementRef | undefined;
   @ViewChild('elementName', { static: true }) elementNameWithStatic: ElementRef | undefined;
 
+  @ContentChild('contentChildDiv') contentChildDivWithoutStatic: ElementRef | undefined;
+  @ContentChild('contentChildDiv', { static: true }) contentChildDivWithStatic: ElementRef | undefined;
+
   constructor() {
     console.group('constructor');
     console.log('constuctor called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
-  // since we used { static: true } so this.elementNameWithStatic has native element here and for onwards lifecycle methods
+  // since we used { static: true }
+  // so this.elementNameWithStatic and this.contentChildDivWithStatic
+  // both have native element here and for onwards lifecycle methods
   ngOnChanges(changes: SimpleChanges): void {
     console.group('ngOnChanges');
     console.log('ngOnChanges called', changes);
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
@@ -71,6 +81,8 @@ export class ServerElementComponent implements
     console.log('ngOnInit called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
@@ -79,14 +91,19 @@ export class ServerElementComponent implements
     console.log('ngDoCheck called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
+  // this.contentChildDivWithoutStatic has the nativeElement here now and for further lifecycle methods
   ngAfterContentInit() {
     console.group('ngAfterContentInit');
     console.log('ngAfterContentInit called')
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
@@ -95,6 +112,8 @@ export class ServerElementComponent implements
     console.log('ngAfterContentChecked called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
@@ -104,6 +123,8 @@ export class ServerElementComponent implements
     console.log('ngAfterViewInit called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
@@ -112,6 +133,8 @@ export class ServerElementComponent implements
     console.log('ngAfterViewChecked called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 
@@ -121,6 +144,8 @@ export class ServerElementComponent implements
     console.log('ngOnDestory called');
     console.log('ElementWithoutStatic', this.elementNameWithoutStatic?.nativeElement);
     console.log('ElementWithStatic', this.elementNameWithStatic?.nativeElement);
+    console.log('ElementWithoutStatic', this.contentChildDivWithoutStatic?.nativeElement);
+    console.log('ElementWithStatic', this.contentChildDivWithStatic?.nativeElement);
     console.groupEnd();
   }
 

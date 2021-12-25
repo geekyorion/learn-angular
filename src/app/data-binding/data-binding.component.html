@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-xs-12">
             <app-server-element *ngFor="let serverElement of serverElements" [serverElement]="serverElement">
-                <!-- <div class="bg-light px-3 py-1">
+                <div class="bg-light px-3 py-1" #contentChildDiv>
                     <p>to render this paragraph or to project this paragraph use &lt;ng-content&gt;&lt;/ng-content&gt;
                     </p>
                     <p>
@@ -14,7 +14,7 @@
                         <br />
                         the server name is {{ serverElement.name }}
                     </p>
-                </div> -->
+                </div>
             </app-server-element>
         </div>
     </div>
