@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
+  loadedFeature: string = 'recipe';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 
 }
