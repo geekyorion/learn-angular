@@ -18,6 +18,8 @@ import { ShoppingEditComponent } from './project/components/shopping-list/shoppi
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CockpitComponent } from './data-binding/cockpit/cockpit.component';
 import { ServerElementComponent } from './data-binding/server-element/server-element.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ServerElementComponent } from './data-binding/server-element/server-ele
     ShoppingEditComponent,
     DataBindingComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    DirectivesComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
