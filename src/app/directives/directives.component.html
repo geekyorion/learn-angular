@@ -3,8 +3,8 @@
         <div class="col-12 mt-3">
             <p appBasicHighlight>This paragraph is using the custom hightlight directive</p>
             <p appBetterHighlight>This paragraph is using renderer2 to highlight the background color</p>
-            <p appBetterHighlight defaultColor="lightgreen" highlightColor="lightblue">This paragraph is using renderer2
-                to highlight the background color</p>
+            <!-- <p appBetterHighlight defaultColor="lightgreen" highlightColor="lightblue">This won't work now</p> -->
+            <p [appBetterHighlight]="'lightblue'" defaultColor="lightgreen">This will work instead</p>
         </div>
     </div>
 </div>

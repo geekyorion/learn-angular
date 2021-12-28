@@ -6,7 +6,8 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Render
 export class BetterHighlightDirective implements OnInit {
 
   @Input() defaultColor: string = 'transparent';
-  @Input() highlightColor: string = 'lightgreen';
+  // if we provide the name of selector as alias then we need to bind the highlight color as [selector]="'value'"
+  @Input('appBetterHighlight') highlightColor: string = 'lightgreen';
 
   @HostBinding('style.backgroundColor') backgroundColor: string = this.defaultColor;
 
