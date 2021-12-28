@@ -22,6 +22,22 @@
             <div *appUnless="false">
                 <p>this div is rendered because the condition evaluates to false</p>
             </div>
+
+            <!-- ngSwitch -->
+            <hr />
+            <p>Use below buttons to set the different value and watch ngSwitch in action</p>
+            <div class="btn-group" role="group" aria-label="set value variable">
+                <button class="btn btn-primary" type="button" (click)="value = 1">1</button>
+                <button class="btn btn-primary" type="button" (click)="value = 10">10</button>
+                <button class="btn btn-primary" type="button" (click)="value = 100">100</button>
+                <button class="btn btn-primary" type="button" (click)="value = 1000">default</button>
+            </div>
+            <div [ngSwitch]="value">
+                <p *ngSwitchCase="1">Value is 1</p>
+                <p *ngSwitchCase="10">Value is 10</p>
+                <p *ngSwitchCase="100">Value is 100</p>
+                <p *ngSwitchDefault>default case</p>
+            </div>
         </div>
     </div>
 </div>

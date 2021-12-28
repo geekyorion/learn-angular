@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  value: number = 10;
+
   constructor() { }
 
   ngOnInit(): void {
