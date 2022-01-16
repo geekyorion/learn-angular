@@ -6,7 +6,8 @@ import { LoggingService } from '../logging.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService, AccountsService]
+  // removing AccountsService from the providers so that it doesn't overwrite the parent's instance
+  providers: [LoggingService]
 })
 export class AccountComponent implements OnInit {
 
