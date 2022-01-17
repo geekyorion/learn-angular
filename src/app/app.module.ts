@@ -62,6 +62,7 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
     AppRoutingModule,
     FormsModule
   ],
+  // we can provide a service in the AppModule to access it's instance in any component
   providers: [],
   bootstrap: [AppComponent]
 })
