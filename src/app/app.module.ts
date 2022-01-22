@@ -29,6 +29,8 @@ import { ServicesComponent } from './services/services.component';
 import { AccountComponent } from './services/account/account.component';
 import { NewAccountComponent } from './services/new-account/new-account.component';
 
+import { LoggingService } from './services/logging.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +65,7 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
     FormsModule
   ],
   // we can provide a service in the AppModule to access it's instance in any component
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
