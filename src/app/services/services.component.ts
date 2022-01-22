@@ -17,7 +17,11 @@ export class ServicesComponent implements OnInit {
 
   accounts: { name: string, status: string }[] = [];
 
-  constructor(private accountService: AccountsService) { }
+  constructor(private accountService: AccountsService) {
+    this.accountService.statusUpdated.subscribe((status: string) => {
+      alert(`Status updated to: ${status}`);
+    });
+  }
 
   ngOnInit(): void {
     this.accounts = this.accountService.accounts;
