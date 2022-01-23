@@ -28,6 +28,13 @@ import { DropdownDirective } from './project/shared/dropdown.directive';
 import { ServicesComponent } from './services/services.component';
 import { AccountComponent } from './services/account/account.component';
 import { NewAccountComponent } from './services/new-account/new-account.component';
+import { RoutingComponent } from './routing/routing.component';
+import { HomeComponent } from './routing/home/home.component';
+import { ServersComponent } from './routing/servers/servers.component';
+import { EditServerComponent } from './routing/servers/edit-server/edit-server.component';
+import { ServerComponent } from './routing/servers/server/server.component';
+import { UsersComponent } from './routing/users/users.component';
+import { UserComponent } from './routing/users/user/user.component';
 
 // import { LoggingService } from './services/logging.service';
 
@@ -57,7 +64,14 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
     DropdownDirective,
     ServicesComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    RoutingComponent,
+    HomeComponent,
+    ServersComponent,
+    EditServerComponent,
+    ServerComponent,
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
