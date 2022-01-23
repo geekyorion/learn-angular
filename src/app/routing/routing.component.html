@@ -3,14 +3,14 @@
     <div class="col-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2">
       <ul class="nav nav-tabs">
         <li class="nav-item" role="presentation">
-          <a routerLink="/" class="nav-link">Home</a>
+          <a routerLink="/" class="nav-link" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item" role="presentation">
           <!-- /users means it is an absolute path, if we use 'users' only then it is a relative path -->
-          <a [routerLink]="'/users'" class="nav-link">Servers</a>
+          <a [routerLink]="'/users'" class="nav-link" routerLinkActive="active">Servers</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a [routerLink]="['/servers']" class="nav-link">Users</a>
+          <a [routerLink]="['/servers']" class="nav-link" routerLinkActive="active">Users</a>
         </li>
       </ul>
     </div>
