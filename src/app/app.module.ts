@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { EditServerComponent } from './routing/servers/edit-server/edit-server.c
 import { ServerComponent } from './routing/servers/server/server.component';
 import { UsersComponent } from './routing/users/users.component';
 import { UserComponent } from './routing/users/user/user.component';
+import { appRoutes } from './routing/routers.route';
 
 // import { LoggingService } from './services/logging.service';
 
@@ -76,7 +78,8 @@ import { UserComponent } from './routing/users/user/user.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   // we can provide a service in the AppModule to access it's instance in any component
   providers: [ /*LoggingService */],
