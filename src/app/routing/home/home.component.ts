@@ -15,6 +15,10 @@ export class HomeComponent implements OnInit {
 
   onLoadServers() {
     this.router.navigate(['/servers']);
+
+    // we can also pass query string and fragment using navigate method
+    // here 1 is server id
+    // this.router.navigate(['/servers', 1, 'edit'], { queryParams: { allowEdit: 1}, fragment: 'loading' });
   }
 
   // navigate doesn't track the absolute path so if we pass 'users' in users component
