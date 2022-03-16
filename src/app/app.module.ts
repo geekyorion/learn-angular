@@ -36,7 +36,8 @@ import { EditServerComponent } from './routing/servers/edit-server/edit-server.c
 import { ServerComponent } from './routing/servers/server/server.component';
 import { UsersComponent } from './routing/users/users.component';
 import { UserComponent } from './routing/users/user/user.component';
-import { appRoutes } from './routing/routers.route';
+import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
+import { RouteSectionRoutingModule } from './routing/route-routing.module';
 
 // import { LoggingService } from './services/logging.service';
 
@@ -73,13 +74,14 @@ import { appRoutes } from './routing/routers.route';
     EditServerComponent,
     ServerComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouteSectionRoutingModule
   ],
   // we can provide a service in the AppModule to access it's instance in any component
   providers: [ /*LoggingService */],
